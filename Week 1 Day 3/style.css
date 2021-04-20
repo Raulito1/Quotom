@@ -1,0 +1,56 @@
+
+
+#girls {
+    padding: auto;
+    transition: transform .2s;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+#girls:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+#avatar {
+    padding: auto;
+    transition: transform .2s;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+
+
+#avatar:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+#navibar {
+    display: flex;
+    background-color: dimgrey;
+    justify-content: center;
+    border: 1px;
+    height: 60px;
+}
+
+#navibar .a {
+    font-size: 10px;
+    
+}
+
+@media (min-width: 1000px) {
+    #navibar {
+        background-color: aquamarine;
+    }
+}
+
+@media (max-width: 500px) {
+    #navibar {
+        background-color: blue;
+    }
+}

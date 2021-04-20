@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Is Fun!!</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- Im using the DIV tag to contain my table in a DIV container -->
+    <div id="tableInput">
+        <!-- Using the Table tag in my case many ways to approach this but im choosing the table to use dynamically -->
+        <table border="1" class="tableCenter" id="myTable">
+            <!-- the THEAD element used in this case for the table header  -->
+            <h1>CRUD IS FUN!!</h1>
+            <h2>Input Table Fields</h2>
+            <!-- using the <tr> tag for table row-->
+            <tr>
+                <!-- within each table row i have a <td> tag for table data in my case for First Name , Middle Name, Last Name, etc.-->
+                <td>Fisrt Name:</td>
+                <!-- use the <input> tag to get user Input type attribute text for text inputs email for email fields and number for number fields
+                gave each input an id name to grab the element for styling in my css page and javascript, then i used the onfocus attribute so when you click 
+                on the (this) input field it'll clear it out, and finally i used the placeholder attribute to use a placeholder name ex(First Name)-->
+                <td><input class="name" type="text" id="firstName" onfocus="this.value=''" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td><input type="text" class="name" id="middleName" onfocus="this.value=''" placeholder="Middle Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" class="name" id="lastName" onfocus="this.value=''" placeholder="Last Name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="email" onfocus="this.value=''" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" id="address" onfocus="this.value=''" placeholder="Addy"></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" id="dateOfBirth" onfocus="this.value=''" placeholder="Date Of Birth"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" id="city" onfocus="this.value=''" placeholder="City"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" id="state" onfocus="this.value=''" placeholder="State"></td>
+            </tr>
+            <tr>
+                <td>Zip</td>
+                <td><input type="number" onfocus="this.value=''" id="zipCode"></td>
+            </tr>
+        </table>
+    </div>
+    <!--Used the <br> tag for a breakline to give a space on the page-->
+    <br>
+    <!-- wrapped my buttons in a div for styling and positioning-->
+    <div id="subButton">
+        <input type="button" value="Add" id="addValue" onclick="addRow()">
+        <button id="clearButton" onclick="clearThis()">
+            Click Here To Clear
+        </button>
+    </div>
+    <br>
+    <!-- this is table to display whatever was input ny the user in above table styled it inline with border=1 wrapped it in a div-->
+    <div id="outputTable">
+        <table id="myTableData" border="1">
+            <h2>Output Table Values</h2>
+            <tr>
+                <!-- left the first <td> tag empty to hold room for my delete button created with javascript once a cell is inserted on my page refer to javascript page-->
+                <td></td>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>DOB</td>
+                <td>City</td>
+                <td>State</td>
+                <td>Zip</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <!-- using the script src tag for reference to my javascript page and my functions -->
+    <script src="/script.js"></script>
+
+</html>

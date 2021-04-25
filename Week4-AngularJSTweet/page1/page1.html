@@ -1,0 +1,37 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Tweet List:</h3>
+    </div>
+    <div class="col-md-5">
+      <h3>Search: <input type="text" ng-model="search"> </h3>
+    </div>
+    <div class="col-md-4">
+      <div class="msg1" ng-show="msg1"> <h3>{{msg1}}</h3>  </div>
+    </div>   
+  </div>
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date:</th>
+        <th>Tweet:</th>
+        <th width=200 >Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="tweeter in data">
+        <td>{{tweeter.name}}</td>
+        <td>{{tweeter.date }}</td>
+        <td>{{tweeter.text}}</td>
+        <td>  
+            <a href="#!/page3/{{tweeter.$id}}" class="btn btn-info">Edit</a> 
+            <a href="" ng-click="deleteTweet(tweeter)" class="btn btn-danger">Delete</a> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

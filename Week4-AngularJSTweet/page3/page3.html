@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-8">
+      <h3>Edit Tweet:</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="msg3" ng-show="msg3">  <h3>{{msg3}}</h3> </div>
+    </div>
+    
+  </div>
+
+<div class="clearfix"></div>
+
+<form class="form-horizontal" ng-submit="editTweet(tweeter.$id)">
+  <div class="form-group">
+    <label class="control-label col-sm-2">Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" ng-model="tweeter.name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Date:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" ng-model="tweeter.datetime">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Text:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control"  ng-model="tweeter.text">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <a class="btn btn-info" href="#!/page1">Cancel</a>
+      <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+</form>

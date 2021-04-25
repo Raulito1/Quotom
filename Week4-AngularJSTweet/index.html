@@ -1,0 +1,122 @@
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Angular JS CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"
+      integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap CDN -->
+     <!-- Latest bootstrap compiled and minified CSS -->
+     <link
+     rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+     crossorigin="anonymous"
+   />
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script
+     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+     crossorigin="anonymous"
+   ></script>
+    <title>Tweeter</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand">Tweeter</a>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#!page1">Home</a></li>
+              <li><a href="#!/page2">Add</a></li>
+            </ul>
+          </div>
+          <!-- /.nav-collapse -->
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <ng-view></ng-view>
+    </div>
+    <!-- angular route CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"
+      integrity="sha512-5zOAub3cIpqklnKmM05spv4xttemFDlbBrmRexWiP0aWV8dlayEGciapAjBQWA7lgQsxPY6ay0oIUVtY/pivXA=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Angular Firebase CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js"
+      integrity="sha512-8ZDKhABrbEX/eIybbe5W4gM3qP6ABDDHrb9c/+HoqI6jT3vDIxmNSlEsw1DBd/J/dmLDs5Ueg2WWYLqpq0/U8A=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap CDN -->
+     <!-- Latest bootstrap compiled and minified CSS -->
+     <link
+     rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+     crossorigin="anonymous"
+   />
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script
+     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+     crossorigin="anonymous"
+   ></script>
+   
+    <!-- js scripts -->
+    <script src="app.js"></script>
+    <script src="page1/page1.js"></script>
+    <script src="page2/page2.js"></script>
+    <script src="page3/page3.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCkEKe3aNrcPupWLviLuYHyPX4aVQdD7vQ",
+        authDomain: "tweeter-b692f.firebaseapp.com",
+        databaseURL: "https://tweeter-b692f-default-rtdb.firebaseio.com",
+        projectId: "tweeter-b692f",
+        storageBucket: "tweeter-b692f.appspot.com",
+        messagingSenderId: "499310172444",
+        appId: "1:499310172444:web:c40f8346e25e076720c2d9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>

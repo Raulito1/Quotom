@@ -1,3 +1,6 @@
+/* Since the module is a container for the different parts of an application
+	and is a container for the apllication controllers 
+*/
 angular.module("myApp.page1",['ngRoute','firebase'])
 .config(['$routeProvider',function($routeProvider){
 	$routeProvider
@@ -6,6 +9,9 @@ angular.module("myApp.page1",['ngRoute','firebase'])
 			controller:"page1Ctrl"
 		});
 }])
+/*
+	Controllers always belong to a module so this is the controller for Page1
+*/
 .controller('page1Ctrl', function($scope,$firebaseArray){
 	$scope.msg1 = false;
 	var ref = firebase.database().ref("tweeter");

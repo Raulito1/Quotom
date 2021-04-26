@@ -14,7 +14,6 @@ angular.module("myApp.page2",['ngRoute','firebase'])
 		.then(
 			function(ref){
 				$scope.tweeter.name = "";
-        $scope.tweeter.date = "";
 				$scope.tweeter.text = "";
 				$scope.msg2= "Tweet added successfully.";
 				window.setTimeout(function(){

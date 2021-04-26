@@ -18,13 +18,11 @@ angular.module("myApp.page3",['ngRoute','firebase'])
 		var ref = firebase.database().ref("tweeter/"+id);
 		ref.update({
 			name:$scope.tweeter.name,
-			department:$scope.tweeter.datetime,
-			level:$scope.tweeter.text,
+			text:$scope.tweeter.text,
 		})
 		.then(
 			function(ref){
 				$scope.tweeter.name= "";
-				$scope.tweeter.datetime="";
 				$scope.tweeter.text = "";
 				$scope.msg3= "updated successfully.";
 				window.setTimeout(function(){

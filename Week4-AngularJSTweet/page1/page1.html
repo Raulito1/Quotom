@@ -1,33 +1,43 @@
+<!-- Ths is Page1 Html in my Page 1 folder -->
 <div class="container">
   
   <div class="row">
     <div class="col-md-3">
       <h3>Tweet List:</h3>
     </div>
-    <div class="col-md-5">
-      <h3>Search: <input type="text" ng-model="search"> </h3>
-    </div>
     <div class="col-md-4">
       <div class="msg1" ng-show="msg1"> <h3>{{msg1}}</h3>  </div>
     </div>   
   </div>
 
-
+<!-- created a table -->
 <table class="table table-bordered">
+  <!-- my Table headers -->
     <thead>
+      <!-- Table rows qith header names -->
       <tr>
         <th>Name</th>
-        <th>Date:</th>
         <th>Tweet:</th>
         <th width=200 >Actions</th>
       </tr>
     </thead>
+    <!-- The body of my table -->
     <tbody>
+      <!-- so i use my ng-repeat to iterate through my array in my database
+      and display the data in my database
+      -->
       <tr ng-repeat="tweeter in data">
         <td>{{tweeter.name}}</td>
-        <td>{{tweeter.date }}</td>
         <td>{{tweeter.text}}</td>
         <td>  
+          <!-- these are the links for when you click on the edit and delete button
+            when youp click on the Edit button it will grab the id and redirect you to Page3
+            so you can edit your data
+
+            the delete button uses ng-click directive to run the the deleteTweet(tweeter) function 
+            with the data in the parameter to determine what to delete and you can see my delete function on 
+            page1.JS
+          -->
             <a href="#!/page3/{{tweeter.$id}}" class="btn btn-info">Edit</a> 
             <a href="" ng-click="deleteTweet(tweeter)" class="btn btn-danger">Delete</a> 
         </td>
